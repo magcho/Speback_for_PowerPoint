@@ -12,6 +12,7 @@ Public Class ThisAddIn
 
     Private Sub Application_SlideShowBegin(Wn As SlideShowWindow) Handles Application.SlideShowBegin
         MsgBox("hello")
-
     End Sub
+
+
 End Class
