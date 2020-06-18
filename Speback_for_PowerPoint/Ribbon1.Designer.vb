@@ -120,6 +120,7 @@
         '
         'Button2
         '
+        Me.Button2.Enabled = False
         Me.Button2.Image = Global.Speback_for_PowerPoint.My.Resources.Resources.people
         Me.Button2.Label = "視聴者用リンクを開く"
         Me.Button2.Name = "Button2"
@@ -127,6 +128,7 @@
         '
         'Button3
         '
+        Me.Button3.Enabled = False
         Me.Button3.Image = Global.Speback_for_PowerPoint.My.Resources.Resources.presentation_alt
         Me.Button3.Label = "発表者用リンクを開く"
         Me.Button3.Name = "Button3"
