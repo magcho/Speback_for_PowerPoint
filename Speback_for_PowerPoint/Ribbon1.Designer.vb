@@ -49,7 +49,6 @@
         Me.Label1 = Me.Factory.CreateRibbonLabel
         Me.Group3 = Me.Factory.CreateRibbonGroup
         Me.Box4 = Me.Factory.CreateRibbonBox
-        Me.Button2 = Me.Factory.CreateRibbonButton
         Me.Button3 = Me.Factory.CreateRibbonButton
         Me.Group2 = Me.Factory.CreateRibbonGroup
         Me.Box2 = Me.Factory.CreateRibbonBox
@@ -91,18 +90,21 @@
         '
         Me.EditBox1.Label = "スライドトークン"
         Me.EditBox1.Name = "EditBox1"
+        Me.EditBox1.ScreenTip = "token"
+        Me.EditBox1.SuperTip = "WEBページに表示されているトークンを入力してしてください"
         Me.EditBox1.Text = Nothing
         '
         'Button1
         '
+        Me.Button1.Enabled = False
         Me.Button1.Image = Global.Speback_for_PowerPoint.My.Resources.Resources.sort_alt
-        Me.Button1.Label = "接続する"
+        Me.Button1.Label = "Spebackに接続する"
         Me.Button1.Name = "Button1"
         Me.Button1.ShowImage = True
         '
         'Label1
         '
-        Me.Label1.Label = "スライドトークンを入力してください"
+        Me.Label1.Label = "未接続です"
         Me.Label1.Name = "Label1"
         '
         'Group3
@@ -114,23 +116,14 @@
         'Box4
         '
         Me.Box4.BoxStyle = Microsoft.Office.Tools.Ribbon.RibbonBoxStyle.Vertical
-        Me.Box4.Items.Add(Me.Button2)
         Me.Box4.Items.Add(Me.Button3)
         Me.Box4.Name = "Box4"
-        '
-        'Button2
-        '
-        Me.Button2.Enabled = False
-        Me.Button2.Image = Global.Speback_for_PowerPoint.My.Resources.Resources.people
-        Me.Button2.Label = "視聴者用リンクを開く"
-        Me.Button2.Name = "Button2"
-        Me.Button2.ShowImage = True
         '
         'Button3
         '
         Me.Button3.Enabled = False
         Me.Button3.Image = Global.Speback_for_PowerPoint.My.Resources.Resources.presentation_alt
-        Me.Button3.Label = "発表者用リンクを開く"
+        Me.Button3.Label = "スライドのページを開く"
         Me.Button3.Name = "Button3"
         Me.Button3.ShowImage = True
         '
@@ -149,11 +142,14 @@
         '
         'CheckBox1
         '
+        Me.CheckBox1.Checked = True
+        Me.CheckBox1.Enabled = False
         Me.CheckBox1.Label = "このPCとSpeback上のスライドを同期する"
         Me.CheckBox1.Name = "CheckBox1"
         '
         'Button4
         '
+        Me.Button4.Enabled = False
         Me.Button4.Image = Global.Speback_for_PowerPoint.My.Resources.Resources.ui_play
         Me.Button4.Label = "最初のスライドから"
         Me.Button4.Name = "Button4"
@@ -187,7 +183,6 @@
     Private WithEvents EditBox1 As Microsoft.Office.Tools.Ribbon.RibbonEditBox
     Friend WithEvents Button1 As Microsoft.Office.Tools.Ribbon.RibbonButton
     Friend WithEvents Box3 As Microsoft.Office.Tools.Ribbon.RibbonBox
-    Friend WithEvents Button2 As Microsoft.Office.Tools.Ribbon.RibbonButton
     Friend WithEvents Button3 As Microsoft.Office.Tools.Ribbon.RibbonButton
     Friend WithEvents Group2 As Microsoft.Office.Tools.Ribbon.RibbonGroup
     Friend WithEvents Box2 As Microsoft.Office.Tools.Ribbon.RibbonBox
@@ -195,7 +190,7 @@
     Friend WithEvents Box4 As Microsoft.Office.Tools.Ribbon.RibbonBox
     Friend WithEvents CheckBox1 As Microsoft.Office.Tools.Ribbon.RibbonCheckBox
     Friend WithEvents Button4 As Microsoft.Office.Tools.Ribbon.RibbonButton
-    Private WithEvents Label1 As Microsoft.Office.Tools.Ribbon.RibbonLabel
+    Friend WithEvents Label1 As Microsoft.Office.Tools.Ribbon.RibbonLabel
 End Class
 
 Partial Class ThisRibbonCollection
